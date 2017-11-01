@@ -1,4 +1,4 @@
-# douban_group_convs #
+# Douban Group Conversation Corpus #
 A dataset of online conversations in Chinese.
 
 Douban Group Conversations is a corpus of online conversations crawled from the Chinese web forum [Douban Group](https://www.douban.com/group). People discuss on a specific topic as a group. The messages of a given group form a conversation. The ground-truth of the reply-to relations of each conversation is obtained by tracking the quoting information of each message. This dataset contains 10,425 conversations with 137,980 messages. After performing Chinese word-cut, each message on average results in 12 words, which is very short.
