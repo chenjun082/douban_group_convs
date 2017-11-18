@@ -71,4 +71,17 @@ Each line is a unique message. You need to separately parse each line with json.
 * tokens.json  
 The tokenized representations of messages with respect to corpus.jsonl. Each message has the same line numbers in both files. Each message is tokenized by performing Chinese word-cut with [jieba](https://github.com/fxsjy/jieba). Then, each cutted word is represented by a unique integer. Thus, each message in tokens.json is represented by a list of integers (in word sequence).
 
+## Read Dataset ##
 
+<pre>
+<code>
+import json
+with open('trees.json', 'r') as f:
+    trees = json.load(f, encoding='utf-8')
+with open('corpus.jsonl', 'r') as f:
+    corpus = [json.loads(line.strip()) for line in f]
+with open('tokens.json', 'r') as f:
+    tokens = json.load(f, encoding='utf-8')
+print '%d conversations, %d messages' % (len(trees), len(corpus))
+</code>
+</pre>
